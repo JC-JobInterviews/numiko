@@ -34,7 +34,7 @@ function navBarPositioning() {
   const position = window.scrollY;
   updateProgressBar(position);
   updateNavTitle(position);
-  if (position >= navPosition && position < 6000) {
+  if (position >= navPosition && position < 5800) {
     navbar.classList.add("navBarStick");
   } else {
     navbar.classList.remove("navBarStick");
@@ -52,7 +52,7 @@ function updateNavTitle(position) {
     Math.floor((position - 775) / 660) < 1
       ? 0
       : Math.floor((position - 775) / 660);
-  const titleNum = titles[positionId];
+  const titleNum = titles[positionId] ?? titles[titles.length - 1];
   // console.log(positionId);
   navTitleNode.innerHTML = `Section ${titleNum}`;
 }
