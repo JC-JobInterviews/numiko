@@ -1,0 +1,68 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* NavBar */
+nav,
+#accordianNav,
+#progressContainer {
+  background-color: black;
+  color: white;
+}
+
+#mainNav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 5dvh;
+}
+
+#navButton:hover,
+#accordianNav h4 {
+  cursor: pointer;
+  color: rgb(240, 239, 239);
+}
+
+.navBarStick {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#accordianNav {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100dvw;
+  padding: 0 10rem;
+}
+
+#accordianNav a {
+  padding: 2.5rem 7.5rem;
+  text-decoration: none;
+}
+
+.accordHide {
+  display: none;
+}
+
+/* Progress */
+#progressBar {
+  display: inline-block;
+  height: 1dvh;
+  background-color: aqua;
+  min-width: 100px;
+}
+
+/* Sections */
+#Zero {
+  margin-bottom: 5vh;
+}
+
+section {
+  height: 75dvh;
+  background-color: rgb(240, 239, 239);
+  margin-top: 5vh;
+  padding: 2rem 5rem;
+}
