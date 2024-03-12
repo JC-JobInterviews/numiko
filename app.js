@@ -34,7 +34,7 @@ function navBarPositioning() {
   const position = window.scrollY;
   updateProgressBar(position);
   updateNavTitle(position);
-  if (position >= navPosition) {
+  if (position >= navPosition && position < 6000) {
     navbar.classList.add("navBarStick");
   } else {
     navbar.classList.remove("navBarStick");
