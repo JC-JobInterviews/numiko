@@ -48,9 +48,12 @@ function updateProgressBar(position) {
 }
 
 function updateNavTitle(position) {
-  const positionId = 0 || Math.floor((position - 775) / 660);
+  const positionId =
+    Math.floor((position - 775) / 660) < 1
+      ? 0
+      : Math.floor((position - 775) / 660);
   const titleNum = titles[positionId];
-  console.log(positionId);
+  // console.log(positionId);
   navTitleNode.innerHTML = `Section ${titleNum}`;
 }
 
@@ -88,4 +91,3 @@ navAccordianLinks();
 window.onscroll = () => navBarPositioning();
 
 let appTotalHeight = document.body.scrollHeight;
-console.log(appTotalHeight);
